@@ -1,0 +1,490 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  min-height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.6;
+}
+
+/* Font classes */
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-cursive {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Header styles */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3rem;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(20, 19, 19, 0.1);
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+/* Logo styles */
+.logo,
+.logo-white {
+  width: 170px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo,
+  .logo-white {
+    width: 140px;
+    margin-bottom: 0.625rem;
+  }
+}
+
+/* Navigation styles */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin-top: 0.625rem;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0;
+    margin-top: 0.625rem;
+  }
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #0a0a0a;
+  letter-spacing: 0.0625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  background-color: #15ca42;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero section */
+.hero-section {
+  position: relative;
+}
+
+.hero-section .relative {
+  position: relative;
+}
+
+.top-image img {
+  width: 100%;
+  max-width: 1400px;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .top-image img {
+    height: 40vh;
+  }
+}
+
+/* Hero section overlay */
+.hero-section .relative::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(22, 54, 34, 0.5);
+}
+
+/* Hero section text */
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: white;
+  opacity: 0;
+  animation: slideFadeIn 2.5s ease-out forwards;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .image-text {
+    top: 20%;
+    left: 5%;
+    transform: none;
+    max-width: 90%;
+    gap: 0.5rem;
+  }
+}
+
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes slideFadeIn {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+.line-quality {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2eebf9;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .line-quality {
+    font-size: 1.25rem;
+  }
+}
+
+.line-drink {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #a3e635;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .line-drink {
+    font-size: 2rem;
+  }
+}
+
+.line-self {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #a3e635;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .line-self {
+    font-size: 1.5rem;
+  }
+}
+
+.tagline {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.75rem;
+  color: #2eebf9;
+  line-height: 1.4;
+  max-width: 500px;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 1.25rem;
+    max-width: 90%;
+  }
+}
+
+.tagline2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.75rem;
+  color: #2eebf9;
+  line-height: 1.4;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .tagline2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Gas button */
+a[href="#gas-section"] {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #17ee77;
+  color: #0f0f0f;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.625rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+a[href="#gas-section"]:hover {
+  background-color: #15ca42;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  a[href="#gas-section"] {
+    position: static;
+    display: block;
+    margin: 1.25rem auto;
+    text-align: center;
+    width: fit-content;
+  }
+}
+
+/* Card styles */
+.card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  height: 256px;
+  object-fit: contain;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.card .p-4 {
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Product and gas sections */
+.all-images,
+.gas-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .all-images,
+  .gas-section {
+    gap: 1rem;
+  }
+}
+
+.image-container,
+.gas-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-label p,
+.gas-label {
+  margin-top: 0.75rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #15803d;
+}
+
+.card p.font-sans {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-top: 0.25rem;
+}
+
+/* Gas section title */
+.gas-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: #1a3d2f;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .gas-title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Footer styles */
+.footer {
+  background: rgba(22, 54, 34, 0.95);
+  color: white;
+  padding: 2.5rem 1.25rem;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    width: 100%;
+    max-width: 90%;
+    margin: 0.625rem 0;
+  }
+}
+
+.logo-small {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.footer-column h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: white;
+}
+
+.footer-column p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  color: #dcdcdc;
+  margin: 0.5rem 0;
+}
+
+.footer-column i {
+  margin-right: 0.625rem;
+  color: #1da1f2;
+}
+
+.footer-column a {
+  color: #f9f9f9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #15ca42;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: #dcdcdc;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.footer-item i {
+  color: #1da1f2;
+  font-size: 1.125rem;
+}
+
+/* Typography for other pages */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1a3d2f;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.875rem;
+  }
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.125rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  p {
+    font-size: 1rem;
+  }
+}
